@@ -8,6 +8,7 @@ import java.util.Date;
  */
 public class Factura {
 
+    private int idFactura;
     private Date fecha;
     private int hora;
     private Cliente Cliente;
@@ -17,13 +18,25 @@ public class Factura {
     public Factura() {
     }
 
-    public Factura(Date fecha, int hora, Cliente Cliente, double valor, Zona Zona) {
+    public Factura(int idFactura, Date fecha, int hora, Cliente Cliente, double valor, Zona Zona) {
+        this.idFactura = idFactura;
         this.fecha = fecha;
         this.hora = hora;
         this.Cliente = Cliente;
         this.valor = valor;
         this.Zona = Zona;
     }
+
+    public int getIdFactura() {
+        return idFactura;
+    }
+
+    public void setIdFactura(int idFactura) {
+        this.idFactura = idFactura;
+    }
+
+    
+    
 
     public Date getFecha() {
         return fecha;
