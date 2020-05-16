@@ -11,8 +11,54 @@
 
             <ui:define name="content">
                 <h:form>
+                    <div id="Formulario">
+                        <center>
+           <p:panelGrid columns="1" layout="grid"  style="width:70%" >
+               <h1>Registro Empresa</h1>
+            <div style="padding:10px;">     
+                            <p:outputLabel value="Nombre empresa: " style="font-weight:bold;"/>
+                            <p:inputText value="#{crearVista.user.nombre}" style="width:100%"/>
+                        </div>
 
+                        <div style="padding:100px;">
+                            <p:outputLabel value="Establecer contraseña: " style="font-weight:bold;"/>
+                            <p:inputText value="#{crearVista.user.apellido}" style="width:100%"/>
+                        </div>
+
+                        <div style="padding:60px;">
+                            <p:outputLabel value="Dirreción: " style="font-weight:bold;"/>
+                            <p:inputText style="width:100%" value="#{crearVista.user.edad}"/>
+                        </div>
+
+                        <div style="padding:60px;">
+                            <p:outputLabel value="Telefono: " style="font-weight:bold;"/>
+                            <p:inputText value="#{crearVista.user.nombre}" style="width:100%"/>
+                        </div>
+
+                        <div style="padding:50px;">
+                            <p:outputLabel value="nit: " style="font-weight:bold;"/>
+                            <p:inputText style="width:100%" value="#{crearVista.user.dni}"/>
+                        </div> 
+                        <div style="padding:20px;">
+                            <cente>
+                            <p:commandButton value="Registrar Empresa" ajax="true" style="width:80%;"/>
+                            <p:growl id="messages" showDetail="true"/>
+
+                            <p:menuButton value="Herramientas">
+                                <p:menuitem value="Save" action="#{menuView.save}" update="messages" icon="pi pi-save"/>
+                                <p:menuitem value="Update" action="#{menuView.update}" update="messages" icon="pi pi-refresh"/>
+                                <p:menuitem value="Delete" action="#{menuView.delete}" ajax="false" icon="pi pi-times"/>
+                                <p:separator />
+                                <p:menuitem value="Homepage" url="http://www.primefaces.org" icon="pi pi-home"/>
+                            </p:menuButton>
+                            <p:spacer width="10"/>  
+                            </cente>
+                        </div>
+                           </p:panelGrid>
+                            </center>
+                        </div>
                 </h:form>
+                
             </ui:define>
 
         </ui:composition>
