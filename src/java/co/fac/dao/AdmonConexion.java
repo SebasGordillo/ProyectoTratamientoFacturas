@@ -24,7 +24,7 @@ public class AdmonConexion {
 
         try {
             Class.forName("org.postgresql.Driver");
-            Connection c = DriverManager.getConnection("jdbc:postgresql://127.0.0.1:5432/trataminetofacturas", "unicentral", "123");
+            Connection c = DriverManager.getConnection("jdbc:postgresql://127.0.0.1:5432/tratamientofacturas", "unicentral", "123");
             return c;
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(AdmonConexion.class.getName()).log(Level.SEVERE, "Error en la conexion", ex);

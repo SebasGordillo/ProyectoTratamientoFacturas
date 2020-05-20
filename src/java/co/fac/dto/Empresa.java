@@ -9,7 +9,7 @@ package co.fac.dto;
 
 public class Empresa {
   private String usuario;
-  private int contrasena;
+  private String contrasena;
   private String direccion;
   private int telefono;
   private int nit;
@@ -18,7 +18,7 @@ public class Empresa {
     public Empresa() {
     }
 
-    public Empresa(String usuario, int contrasena, String direccion, int telefono, int nit) {
+    public Empresa(String usuario, String contrasena, String direccion, int telefono, int nit) {
         this.usuario = usuario;
         this.contrasena = contrasena;
         this.direccion = direccion;
@@ -27,7 +27,6 @@ public class Empresa {
     }
 
     
-
     public String getUsuario() {
         return usuario;
     }
@@ -36,14 +35,15 @@ public class Empresa {
         this.usuario = usuario;
     }
 
-    public int getContrasena() {
+    public String getContrasena() {
         return contrasena;
     }
 
-    public void setContrasena(int contrasena) {
+    public void setContrasena(String contrasena) {
         this.contrasena = contrasena;
     }
 
+ 
     public String getDireccion() {
         return direccion;
     }
